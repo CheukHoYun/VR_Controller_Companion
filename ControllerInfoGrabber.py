@@ -19,6 +19,7 @@ UNTOUCH = 203
 class ControllerInfoGrabber:
     def __init__(self) -> None:
         self.vrsystem = None
+        self.vrinput = None
 
     def get_controller_ids(self):
         left = None
@@ -101,6 +102,7 @@ class ControllerInfoGrabber:
         try:
             openvr.init(openvr.VRApplication_Scene)
             self.vrsystem = openvr.VRSystem()
+            self.vrinput = openvr.VRInput()
             return True
         except openvr.OpenVRError as e:
             print("Error when initializing OpenVR.")

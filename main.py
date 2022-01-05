@@ -59,7 +59,7 @@ while True:
         right_success, right_pose, right_state, right_event = cig.getInfo(packetNum=packetRight, deviceID=right_id)
         # print(right_success)
         # visualizer(right_pose)
-        # print(right_pose)
+        print(right_pose)
         
         if right_event is not None: 
             pp.pprint(right_event)
